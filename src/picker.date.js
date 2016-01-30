@@ -1056,11 +1056,13 @@ DatePicker.prototype.nodes = function( isOpen ) {
             // If there are years to select, add a dropdown menu.
             if ( numberYears ) {
 
+
                 var
+                    currentYear = (new Date()).getFullYear(),
                     minYear = minLimitObject.year,
                     maxYear = maxLimitObject.year,
-                    lowestYear = focusedYear - numberYears,
-                    highestYear = focusedYear + numberYears
+                    lowestYear = currentYear - (numberYears * 2),
+                    highestYear = currentYear + 5
 
                 // If the min year is greater than the lowest year, increase the highest year
                 // by the difference and set the lowest year to the min year.
