@@ -280,7 +280,7 @@ function PickerConstructor( ELEMENT, NAME, COMPONENT, OPTIONS ) {
 
                             // On “enter”, if the highlighted item isn’t disabled, set the value and close.
                             else if ( !angular.element(P.$root[0].querySelectorAll( '.' + CLASSES.highlighted )).hasClass( CLASSES.disabled ) ) {
-                                P.set( 'select', P.component.item.highlight ).close()
+                                P.set( 'select', P.component.item.highlight )
                             }
                         }
 
@@ -660,7 +660,7 @@ function PickerConstructor( ELEMENT, NAME, COMPONENT, OPTIONS ) {
 
                 // If something is picked, set `select` then close with focus.
                 else if ( PickerConstructor._.isInteger( parseInt($target.attr('data-pick')) ) && !targetDisabled ) {
-                    P.set( 'select', parseInt($target.attr('data-pick')) ).close( true )
+                    P.set( 'select', parseInt($target.attr('data-pick')) )
                     P.attachLiveEvents();
                 }
 
