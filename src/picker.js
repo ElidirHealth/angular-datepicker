@@ -655,6 +655,7 @@ function PickerConstructor( ELEMENT, NAME, COMPONENT, OPTIONS ) {
                 // If something is superficially changed, update the `highlight` based on the `nav`.
                 if ( $target.attr('data-nav') && !targetDisabled ) {
                     P.set( 'highlight', P.component.item.highlight, { nav: parseInt($target.attr('data-nav')) } )
+                    P.set( 'select', P.component.item.highlight, {} )
                     P.attachLiveEvents();
                 }
 

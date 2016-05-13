@@ -112,14 +112,14 @@ function DatePicker( picker, settings ) {
             angular.element(picker.$root[0].querySelectorAll( '.' + settings.klass.selectMonth )).on( 'change', function() {
                 var value = this.value
                 if ( value ) {
-                    picker.set( 'highlight', [ picker.get( 'view' ).year, value, picker.get( 'highlight' ).date ] )
+                    picker.set( 'select', [ picker.get( 'view' ).year, value, picker.get( 'highlight' ).date ] )
                     angular.element(picker.$root[0].querySelectorAll( '.' + settings.klass.selectMonth )).triggerHandler( 'focus' )
                 }
             })
             angular.element(picker.$root[0].querySelectorAll( '.' + settings.klass.selectYear )).on( 'change', function() {
                 var value = this.value
                 if ( value ) {
-                    picker.set( 'highlight', [ value, picker.get( 'view' ).month, picker.get( 'highlight' ).date ] )
+                    picker.set( 'select', [ value, picker.get( 'view' ).month, picker.get( 'highlight' ).date ] )
                     angular.element(picker.$root[0].querySelectorAll( '.' + settings.klass.selectYear )).triggerHandler( 'focus' )
                 }
             })
